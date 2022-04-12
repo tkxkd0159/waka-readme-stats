@@ -12,14 +12,19 @@ inputs:
     description: 'Your Wakatime API Key'
     required: true
 
+  LOCALE:
+    required: false
+    description: "Show stats in your own language"
+    default: "en"
+
   SHOW_OS:
     required: false
     description: 'Show the list of OS Worked on In dev metrics'
     default: "True"
 
-  SHOW_PROJECTS:
+  SHOW_LANGUAGE:
     required: false
-    description: 'Show the list of projects worked on in dev metrics'
+    description: "Show the Coding language used in dev metrics"
     default: "True"
 
   SHOW_EDITORS:
@@ -32,14 +37,19 @@ inputs:
     description: 'Show the time zone in the dev metrics'
     default: "True"
 
+  SHOW_PROJECTS:
+    required: false
+    description: 'Show the list of projects worked on in dev metrics'
+    default: "True"
+
+  SHOW_TOTAL_CODE_TIME:
+    required: false
+    description: "Show Total Time you have coded"
+    default: "True"
+
   SHOW_COMMIT:
     required: false
     description: "Shows the number of commit graph in the dev metrics"
-    default: "True"
-
-  SHOW_LANGUAGE:
-    required: false
-    description: "Show the Coding language used in dev metrics"
     default: "True"
 
   SHOW_LINES_OF_CODE:
@@ -72,11 +82,6 @@ inputs:
     description: "Shows the short facts"
     default: "True"
 
-  LOCALE:
-    required: false
-    description: "Show stats in your own language"
-    default: "en"
-
   COMMIT_BY_ME:
     required: false
     description: "Git commit with your own name and email"
@@ -86,12 +91,12 @@ inputs:
     required: false
     description: "Repos you don't want to be counted"
     default: ""
-  
+
   COMMIT_MESSAGE:
     required: false
     description: "Git commit message"
     default: "Updated with Dev Metrics"
-  
+
   SHOW_UPDATED_DATE:
     required: false
     description: "Show updated date"
@@ -101,11 +106,6 @@ inputs:
     required: false
     description: "Updated date format"
     default: "%d/%m/%Y %H:%M:%S"
-
-  SHOW_TOTAL_CODE_TIME:
-    required: false
-    description: "Show Total Time you have coded"
-    default: "True"
 
   SYMBOL_VERSION:
     required: false
