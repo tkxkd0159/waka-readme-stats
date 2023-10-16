@@ -1,5 +1,5 @@
 name: 'Profile Readme Development Stats'
-author: Anmol Pratap Singh
+author: Jaeseung Lee
 description: 'Are you an early 🐤 or a night 🦉? When are you most productive during the day? Let''s check out in your readme!'
 
 inputs:
@@ -11,6 +11,11 @@ inputs:
   WAKATIME_API_KEY:
     description: 'Your Wakatime API Key'
     required: true
+
+  SHOW_UPDATED_DATE:
+    required: false
+    description: "Show updated date"
+    default: "True"
 
   LOCALE:
     required: false
@@ -97,10 +102,20 @@ inputs:
     description: "Git commit message"
     default: "Updated with Dev Metrics"
 
-  SHOW_UPDATED_DATE:
+  COMMIT_USERNAME:
     required: false
-    description: "Show updated date"
-    default: "True"
+    description: "Git commit custom username"
+    default: ""
+
+  COMMIT_EMAIL:
+    required: false
+    description: "Git commit custom email"
+    default: ""
+
+  COMMIT_SINGLE:
+    required: false
+    description: "Erase commit history on each commit"
+    default: "False"
 
   UPDATED_DATE_FORMAT:
     required: false
@@ -111,6 +126,21 @@ inputs:
     required: false
     description: "Version of the symbol block and empty of the progress bar"
     default: "1"
+
+  SECTION_NAME:
+    description: 'Name used in readme to scope the updated section'
+    required: false
+    default: "waka"
+
+  PULL_BRANCH_NAME:
+    required: false
+    description: "The branch to get the readme from"
+    default: ""
+
+  PUSH_BRANCH_NAME:
+    required: false
+    description: "The branch to update the readme in"
+    default: ""
 
 runs:
   using: 'docker'
